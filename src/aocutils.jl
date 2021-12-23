@@ -1,6 +1,14 @@
 using Base: readlines
 using Base: ==
 
+function parse_matrix(io)
+    rows = []
+    for line in eachline(io)
+        push!(rows, parse.(Int8, collect(line)))
+    end
+    return transpose(hcat(rows...))
+end
+
 function parse_point(s::AbstractString)
     nums = split(s, ',')
     return [parse(Int, nums[1])+1, parse(Int, nums[2])+1]

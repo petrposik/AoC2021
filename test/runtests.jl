@@ -62,4 +62,16 @@ using AoC2021
         @test AoC2021.day08("../data/input08.txt") == (495, 1055164)
     end
 
+    @testset "Day 9" begin
+        m = AoC2021.parse_matrix("../data/test_input09.txt")
+        lp = AoC2021.low_points(m)
+        @test lp == [(1, 2), (1, 10), (3, 3), (5, 7)]
+        @test AoC2021.basin_area(m, (1, 2)) == 3
+        @test AoC2021.basin_area(m, (1, 10)) == 9
+        @test AoC2021.basin_area(m, (3, 3)) == 14
+        @test AoC2021.basin_area(m, (5, 7)) == 9
+        @test AoC2021.day09("../data/test_input09.txt") == (15, 1134)
+        @test AoC2021.day09("../data/input09.txt") == (489, 1056330)
+    end
+
 end
