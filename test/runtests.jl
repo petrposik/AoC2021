@@ -59,7 +59,7 @@ using AoC2021
         @test AoC2021.find_encoding(signals) == correct_encoding
         @test AoC2021.decode(correct_encoding, quartets) == 5353
         @test AoC2021.day08("../data/test_input08.txt") == (26, 61229)
-        @test AoC2021.day08("../data/input08.txt") == (495, 0)
+        @test AoC2021.day08("../data/input08.txt") == (495, 1055164)
     end
 
 end
